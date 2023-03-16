@@ -1,28 +1,29 @@
 public class Main {
-    public void main(String[] args) {
-        Car car = new Car();
-        Car car2 = new Car();
-        car.modelName = "car1";
-        car2.modelName = "car2";
-        car.wheelsCount = 4;
-        car2.wheelsCount = 4;
+    public static void main(String[] args) {
+        Car car = new Car("car1",4);
+        Car car2 = new Car("car2",4);
+        String carModelName = car.getModelName();
+        String car2ModelName = car2.getModelName();
+        int carWheelsCount = car.getWheelsCount();
+        int car2WheelsCount = car2.getWheelsCount();
 
         Truck truck = new Truck("truck1",6);
         Truck truck2 = new Truck("truck2",8);
-        String modelName = truck.getModelName();
-        String ModelName2 = truck2.getModelName();
-        int WheelsCount = truck.getWheelsCount();
-        int WheelsCount2 = truck2.getWheelsCount();
+        String truckModelName = truck.getModelName();
+        String truck2ModelName = truck2.getModelName();
+        int truckWheelsCount = truck.getWheelsCount();
+        int truck2WheelsCount = truck2.getWheelsCount();
 
 
-        Bicycle bicycle = new Bicycle();
-        Bicycle bicycle2 = new Bicycle();
-        bicycle.modelName = "bicycle1";
-        bicycle2.modelName = "bicycle2";
-        bicycle.wheelsCount = 2;
-        bicycle2.wheelsCount = 2;
+        Bicycle bicycle = new Bicycle("bicycle1",2);
+        Bicycle bicycle2 = new Bicycle("bicycle2",2);
+        String bicycleModelName = "bicycle1";
+        String bicycle2ModelName = "bicycle2";
+        int bicycleWheelsCount = 2;
+        int bicycle2WheelsCount = 2;
 
-        ServiceStation station = new ServiceStation();
+
+        ServiceStationForTransport station = new ServiceStationForTransport();
         station.check(car, null, null);
         station.check(car2, null, null);
         station.check(null, bicycle, null);
@@ -30,6 +31,7 @@ public class Main {
         station.check(null, null, truck);
         station.check(null, null, truck2);
     }
+
 }
 
 
