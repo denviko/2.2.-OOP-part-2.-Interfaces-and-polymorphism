@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Car car = new Car("car1",4);
@@ -30,7 +33,13 @@ public class Main {
         station.check(null, bicycle2, null);
         station.check(null, null, truck);
         station.check(null, null, truck2);
+
+        List<Transport> roadTraffic = Arrays.asList(bicycle,bicycle2,car,car2,truck,truck2);
+        for (Transport t : roadTraffic) {
+            t.updateTyre();
+        }
     }
+
 
 }
 
