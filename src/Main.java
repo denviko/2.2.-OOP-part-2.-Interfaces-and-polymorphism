@@ -2,6 +2,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    void updateTyre(){
+        return;
+    }
+
     public static void main(String[] args) {
         Car car = new Car("car1",4);
         Car car2 = new Car("car2",4);
@@ -39,6 +43,7 @@ public class Main {
             t.updateTyre();
         }
     }
+
 
 
 }
